@@ -1,5 +1,10 @@
 mat-toolbar {
     justify-content: space-between;
+    position: fixed;
+    background-color: #2f323a;
+    color: #fff;
+    padding: 0 4%;
+    z-index: 100;
 }
 
 .profile-image-toolbar {

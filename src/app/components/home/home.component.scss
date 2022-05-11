@@ -1,7 +1,8 @@
 .sidebar {
     background: #2f323a;
     padding-top: 30px;
-    position: absolute;
+    position: fixed;
+    margin-top: 60px;
     left: 0;
     width: 250px;
     height: 100%;
@@ -60,8 +61,12 @@ label #sidebar_btn:hover {
 }
 
 .content {
-    padding: 10%;
+    padding: 5% 10%;
     margin-left: 250px;
     height: 100vh;
     transition: 0.5s;
+}
+
+table {
+    width: 100%;
 }

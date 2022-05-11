@@ -22,6 +22,9 @@ import { LandingComponent } from './components/landing/landing.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { ProfileComponent } from './components/profile/profile.component';
 import { getStorage, provideStorage } from '@angular/fire/storage';
+import { HttpClientModule } from '@angular/common/http';
+import { MatTableModule } from '@angular/material/table'
+
 
 @NgModule({
   declarations: [
@@ -36,6 +39,7 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    HttpClientModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
@@ -48,8 +52,9 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
     provideStorage(() => getStorage()),
     HotToastModule.forRoot(),
     MatMenuModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
