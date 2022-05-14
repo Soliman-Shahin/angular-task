@@ -21,6 +21,24 @@
 </mat-toolbar>
 
 <div class="content">
+    <!--sidebar start-->
+    <div class="sidebar" *ngIf="user$ | async as user; else loginButton">
+        <div *ngIf="user$ | async as user">
+            <a routerLink="/profile">
+                <img [src]="user.photoURL ?? 'assets/images/image-placeholder.png'" class="profile_image" alt="">
+                <h4>{{user.displayName}}</h4>
+            </a>
+
+        </div>
+        <a class="item" routerLink="/home">
+            <mat-icon>dashboard</mat-icon> Dashboard
+        </a>
+        <a class="item" routerLink="/add">
+            <mat-icon>add</mat-icon> Add Ad
+        </a>
+
+    </div>
+    <!--sidebar end-->
     <router-outlet></router-outlet>
 </div>
 

@@ -34,3 +34,65 @@ body {
 .text-center {
     text-align: center;
 }
+
+.sidebar {
+    background: #2f323a;
+    padding-top: 30px;
+    position: fixed;
+    margin-top: 60px;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    transition: 0.5s;
+    transition-property: left;
+}
+
+.sidebar .profile_image {
+    margin-left: 25%;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+
+.sidebar h4 {
+    margin-left: 25%;
+    color: #ccc;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.sidebar .item {
+    color: #fff;
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.sidebar .item:hover {
+    background: #19B3D3;
+}
+
+.sidebar mat-icon {
+    padding-right: 10px;
+}
+
+label #sidebar_btn {
+    z-index: 1;
+    color: #fff;
+    position: fixed;
+    cursor: pointer;
+    left: 300px;
+    font-size: 20px;
+    margin: 5px 0;
+    transition: 0.5s;
+    transition-property: color;
+}
+
+label #sidebar_btn:hover {
+    color: #19B3D3;
+}

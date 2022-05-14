@@ -1,15 +1,3 @@
-<!--sidebar start-->
-<div class="sidebar">
-    <div *ngIf="user$ | async as user">
-        <img [src]="user.photoURL ?? 'assets/images/image-placeholder.png'" class="profile_image" alt="">
-        <h4>{{user.displayName}}</h4>
-    </div>
-    <a routerLink="/home"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
-    <a routerLink="/profile"><i class="fas fa-cogs"></i><span>Components</span></a>
-
-</div>
-<!--sidebar end-->
-
 <div class="content">
 
     <!-- Advertisements table -->
@@ -58,7 +46,7 @@
             <ng-container matColumnDef="update">
                 <th mat-header-cell *matHeaderCellDef> Update </th>
                 <td mat-cell *matCellDef="let element">
-                    <button mat-raised-button color="primary">
+                    <button mat-raised-button color="primary" routerLink="/add">
                 <mat-icon>edit</mat-icon>
               </button>
                 </td>

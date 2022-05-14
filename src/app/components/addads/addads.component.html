@@ -1,0 +1,52 @@
+<div class="content">
+    <div class="card mat-elevation-z5">
+        <h2>Add new Ad</h2>
+        <div class="card-body">
+            <form [formGroup]="adForm">
+
+                <div class="from-group">
+
+                    <!-- upload image file -->
+                    <div class="file">
+                        <mat-label>Ad image file</mat-label>
+                        <input #imgInput hidden="true" type="file" name="image" accept=".png, .jpg, .jpeg" />
+                        <button mat-flat-button> <mat-icon>backup
+                    </mat-icon></button>
+                    </div>
+
+                    <!-- upload video file -->
+                    <div class="file">
+                        <mat-label>Ad video file</mat-label>
+                        <input #imgInput hidden="true" type="file" name="video" accept=".mp4, .wav" />
+                        <button mat-flat-button>
+                    <mat-icon>cloud
+                    </mat-icon>
+                  </button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <!-- form time -->
+                    <mat-form-field>
+                        <mat-label>From time</mat-label>
+                        <input matInput [matDatepicker]="picker" formControlName="from_time">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+
+                    <!-- to time -->
+                    <mat-form-field>
+                        <mat-label>To time</mat-label>
+                        <input matInput [matDatepicker]="picker2" formControlName="to_time">
+                        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                        <mat-datepicker #picker2></mat-datepicker>
+                    </mat-form-field>
+                </div>
+
+                <div>
+                    <button mat-raised-button color="primary">save <mat-icon>save</mat-icon></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

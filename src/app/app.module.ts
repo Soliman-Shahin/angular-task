@@ -23,7 +23,12 @@ import { MatMenuModule } from '@angular/material/menu';
 import { ProfileComponent } from './components/profile/profile.component';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 import { HttpClientModule } from '@angular/common/http';
-import { MatTableModule } from '@angular/material/table'
+import { MatTableModule } from '@angular/material/table';
+import { AddadsComponent } from './components/addads/addads.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { PhoneLoginComponent } from './components/phone-login/phone-login.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -34,6 +39,8 @@ import { MatTableModule } from '@angular/material/table'
     LandingComponent,
     HomeComponent,
     ProfileComponent,
+    AddadsComponent,
+    PhoneLoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,7 +59,10 @@ import { MatTableModule } from '@angular/material/table'
     provideStorage(() => getStorage()),
     HotToastModule.forRoot(),
     MatMenuModule,
-    MatTableModule
+    MatTableModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
